@@ -1,0 +1,36 @@
+#' @title Alexia value
+#' @description The Alexia value of a TU game.
+#' @param v Characteristic function in binary order.
+#' @param name A logical value.
+#' @return  Computes the Alexia value of a TU game given by vector \eqn{v}.
+#' @details Given a TU game \eqn{(N,v)} and let \eqn{\pi} an order of the players of \eqn{N} (\eqn{\Pi(N)}), the lexinal
+#' \eqn{\lambda^{\pi}(v)\in R^n}{\lambda in Rn} is defined as the lexicographic maximum on \eqn{C(N,v)} with respect to \eqn{\pi}.
+#' \deqn{\lambda_{\pi(k)}^{\pi}(v)=max\{x_{\pi(k)}:x\in C(N,v),x_{\pi(1)}=\lambda_{\pi(l)}^{\pi}(v)\;\forall l\in\{1,\ldots,k-1\}\}}{}
+#' \eqn{\forall k\in\{1,2,\ldots,n\}.}{}
+#'
+#' The lexinal is recursively defined such that every player gets the maximum he can
+#' obtain inside the core under the restriction that the players before him in the corresponding
+#' order obtain their restricted maxima.
+#'
+#' The Alexia value \eqn{\alpha(v)} is defined as the average over the
+#' lexinals.
+#'
+#' \deqn{\alpha(v)=\frac{1}{n!}\sum_{\pi\in\Pi(N)}\lambda^{\pi}(v)}{}
+#'
+#' @examples
+#' v=c(0,0,0,1,1,1,2)
+#' Alexia(v)
+#' @references Tijs,S., Borm,P., Lohmann,E., & Quant,M. (2011). An average lexicographic value for cooperative games. European Journal of Operational Research, 213(1), 210-220.
+#' @seealso \link{Lexinal}, \link{PlotSolution}, \link{Shapley}
+#' @export
+
+Alexia=function(v,name=FALSE){
+  if(name==TRUE){
+    solution="Alexia value"
+    return(solution)
+  }
+  Characteristicdata(v)
+  n=Characteristicdata(v)$n
+  L=Lexinal(v)
+  Al=colSums(L)/factorial(n)
+  return(Al)}

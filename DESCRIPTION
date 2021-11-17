@@ -1,0 +1,27 @@
+Package: TUgames
+Type: Package
+Title: Complete package of a TU game
+Version: 0.1.0
+Authors@R: c(
+      person("Iago","Núñez Lugilde",role=c("aut","cre"), email="iago.nunez.lugilde@uvigo.es",comment="SIDOR. Departamento de Estatística e Investigación Operativa. Universidade de Vigo. Spain"),
+			person("Miguel Ángel","Mirás Calvo",role=c("aut"), comment="ECOBAS. Departamento de Matemáticas. Universidade de Vigo. Spain"),
+			person("Carmen","Quinteiro Sandomingo",role=c("aut"), comment="Departamento de Matemáticas. Universidade de Vigo. Spain"),
+			person("Estela","Sánchez Rodríguez",role=c("aut"),comment="CINBIO. Universidade de Vigo. Grupo SIDOR. Departamento de Estatística e Investigación Operativa. Universidade de Vigo. Spain")
+			)
+Maintainer: Iago Núñez Lugilde <iago.nunez.lugilde@uvigo.es>
+Description: In this package we display the main puntual solutions for a TU game for a symetric situation: the Alexia value, the core-center, the Dutta-Ray value, the nucleolus, the per capita nucleolus, the pre-nucleolus, the Shapley value, the Solidarity value and the Tau-value; we do the graphics of the main joint type solutions: the core-cover, the core, the epsilon core, the least core, the Harsanyi set, the imputation set and the weber set; and we can plot any point (the puntual solutions too) inside of them. Furthermore, we display the main solutions for the ponderate games: The ponderate Shapley value and the weighted-faces solutions. Another important situations of games like the restricted communications or the priori unions are treated here with the Myerson and the Owen value, respectively. There are functions to compare solutions in the Lorenz order, seeing if one solution Lorenz-domine another one, drawing the cumulative-curve or calculating the Deviation index. We check too if a TU game satisfaces some properties and finally there are important functions, like the faces games, the exact envelope, the dividends of Harsanyi...
+License: GPL-3
+Imports: rgl, geometry, rcdd, pracma, Rglpk, RSEIS
+Encoding: UTF-8
+RoxygenNote: 7.1.2
+NeedsCompilation: no
+Packaged: 2021-04-05 15:15:11 UTC; iagol
+Author: Iago Núñez Lugilde [aut, cre] (SIDOR. Departamento de Estatística e
+    Investigación Operativa. Universidade de Vigo. Spain),
+  Miguel Ángel Mirás Calvo [aut] (ECOBAS. Departamento de Matemáticas.
+    Universidade de Vigo. Spain),
+  Carmen Quinteiro Sandomingo [aut] (Departamento de Matemáticas.
+    Universidade de Vigo. Spain),
+  Estela Sánchez Rodríguez [aut] (CINBIO. Universidade de Vigo. Grupo
+    SIDOR. Departamento de Estatística e Investigación Operativa.
+    Universidade de Vigo. Spain)
